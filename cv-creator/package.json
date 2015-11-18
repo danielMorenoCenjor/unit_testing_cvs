@@ -1,0 +1,45 @@
+{
+  "name": "cv_with_grunt",
+  "version": "0.1.0",
+  "main": "src/app.js",
+  "start": "node src/app",
+  "devDependencies": {
+    "body-parser": "^1.14.0",
+    "chai": "latest",
+    "express": "^4.13.3",
+    "grunt": "~0.4.5",
+    "grunt-cli": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-env": "^0.4.4",
+    "grunt-express-server": "latest",
+    "grunt-git": "latest",
+    "grunt-mocha-test": "latest",
+    "grunt-shell": "latest",
+    "jquery": "^2.1.4",
+    "mocha": "latest",
+    "mongodb": "^2.0.43",
+    "phantomjs": "1.9.7-14",
+    "unirest": "^0.4.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.0",
+    "chai": "latest",
+    "express": "^4.13.3",
+    "grunt": "~0.4.5",
+    "grunt-cli": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-env": "^0.4.4",
+    "grunt-express-server": "latest",
+    "grunt-git": "latest",
+    "grunt-mocha-test": "latest",
+    "grunt-shell": "latest",
+    "jquery": "^2.1.4",
+    "mocha": "latest",
+    "mongodb": "^2.0.43",
+    "phantomjs": "1.9.7-14",
+    "unirest": "^0.4.2"
+  }
+  
+}

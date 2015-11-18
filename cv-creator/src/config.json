@@ -1,0 +1,8 @@
+{
+	"db": "mongodb://localhost:27017/cv_creator",
+	"port": 8000,
+	"collection": "cvs",
+	"host": "http://localhost:",
+	"api_route": "/api/cvs/",
+	"apikey": "pass"
+}

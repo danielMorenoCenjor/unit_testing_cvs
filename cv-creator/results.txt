@@ -1,0 +1,46 @@
+
+[0m[0m
+[0m  Test API CV[0m
+[0m    #postCV()[0m
+[2K[0G    [32m  ✓[0m[90m Should reject null cv[0m[33m (68ms)[0m
+[2K[0G    [32m  ✓[0m[90m Should reject empty cv[0m
+[2K[0G    [32m  ✓[0m[90m Should keep CV in DB[0m[33m (43ms)[0m
+[0m    #getCVs()[0m
+[2K[0G    [32m  ✓[0m[90m Should get 1 CV (the first)[0m
+[2K[0G    [32m  ✓[0m[90m Should get some CVs[0m
+[0m    #getCV()[0m
+[2K[0G    [32m  ✓[0m[90m Should get an error, id is empty[0m
+[2K[0G    [31m  1) Should get an error, id not exist[0m
+[2K[0G    [31m  2) Should get the CV[0m
+[2K[0G    [32m  ✓[0m[90m Should get an error, id not valid[0m
+[2K[0G    [32m  ✓[0m[90m Should get an error, id is null[0m
+[0m    #putCV()[0m
+[2K[0G    [31m  3) Should modified CV[0m
+[2K[0G    [31m  4) Should modified CV even though _id is in the modification[0m
+[2K[0G    [32m  ✓[0m[90m Should NOT modified CV if not timestamp [0m
+[0m    #deleteCV()[0m
+[2K[0G    [32m  ✓[0m[90m Should be delete CV[0m
+[2K[0G    [32m  ✓[0m[90m Should NOT be delete CV, because the ID no exist[0m
+
+
+[92m [0m[32m 11 passing[0m[90m (8s)[0m
+[31m  4 failing[0m
+
+[0m  1) Test API CV #getCV() Should get an error, id not exist:
+[0m[31m     Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.[0m[90m
+  
+[0m
+[0m  2) Test API CV #getCV() Should get the CV:
+[0m[31m     Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.[0m[90m
+  
+[0m
+[0m  3) Test API CV #putCV() Should modified CV:
+[0m[31m     Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.[0m[90m
+  
+[0m
+[0m  4) Test API CV #putCV() Should modified CV even though _id is in the modification:
+[0m[31m     Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.[0m[90m
+  
+[0m
+
+

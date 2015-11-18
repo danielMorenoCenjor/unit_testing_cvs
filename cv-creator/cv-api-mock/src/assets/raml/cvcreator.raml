@@ -1,0 +1,78 @@
+#%RAML 0.8
+ 
+title: CV Creator
+baseUri: https://cv-mock.herokuapp.com/api ##CORREGIR##
+version: v0
+traits:
+  - paged:
+      queryParameters:
+        limit:
+          description: Numero de resultados a devolver. Si es 0 devuelve todos los resultados.
+          type: integer
+          required: false
+          example: 1
+        skip:
+          description: Numero de elementos previos que se saltaran en la paginacion. Base 0
+          type: integer
+          required: false
+          example: 1
+  - secured: 
+      headers:
+        Authorization:
+          description: Token de acceso a los recursos de usuario o aplicacion.
+          type: string
+          example: asdf-1234-qwery-uiop
+  - managerSecured: 
+      headers:
+        Authorization:
+          description: Token de acceso a los recursos que debe ser del dueño del recurso, o de administrador. Un token con menos permisos provocara un error 403.
+          type: string
+          example: asdf-1234-qwery-uiop
+/cvs:
+  get:
+    is: [ paged, secured ]
+    description: Devuelve todos los CVs
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include cvcreator-cvs-get.sample.json
+  post:
+    is: [ secured ]
+    description: Permite guardar un CV
+    body:
+      application/json:
+        example: !include cvcreator-cvs-post-body.sample.json
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include cvcreator-cvs-cv-get.sample.json
+  /{cvId}:
+    get:
+      is: [ secured ]
+      description: Obtiene un CV en concreto
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include cvcreator-cvs-cv-get.sample.json
+    put:
+      is: [ managerSecured ]
+      description: Realiza modificaciones un CV determinado. 
+      body:
+        application/json:
+          example: !include cvcreator-cvs-put-body.sample.json
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include cvcreator-cvs-put-body-response.sample.json
+    delete:
+      is: [ managerSecured ]
+      description: Elimina un CV.
+      responses:
+        204:
+          description: Sin contenido. Solicitud aceptada y procesada.
+
+  
