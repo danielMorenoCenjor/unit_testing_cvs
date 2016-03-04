@@ -1,3 +1,18 @@
+/*
+Especificacion del test para el API
+de CV
+
+Depuracion con mocha:
+
+	mocha --debug-brk
+
+En el Visual Code, te vas a Debug y le das al play con
+la configuracion del attach
+
+history: 
+    DMC 04032016 Modifica
+*/
+
 var expect = require("chai").expect;
 var testApi = require("./../lib/api_test.js");
 var assert = require('assert');
